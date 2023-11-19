@@ -3,10 +3,12 @@ namespace NeedlemanWunsch.Services;
 public class Compute : ICompute
 {
     private int GapPernalty = -1;
+    private int Math = 1;
+    private int MisMath = -1;
 
     public int[,] CreateMatrix(int xSize, int ySize)
     {
-        var matrix = new int[xSize, ySize];
+        var matrix = new int[ySize, xSize];
 
         for (int i = 0; i < xSize; i++) matrix[0, i] = i * GapPernalty;
         for (int j = 0; j < ySize; j++) matrix[j, 0] = j * GapPernalty;
@@ -18,10 +20,10 @@ public class Compute : ICompute
     {
         int val1;
 
-        if (match) val1 = matrix[x - 1, y - 1] - GapPernalty;
-        else val1 = matrix[x - 1, y - 1] + GapPernalty;
-        int val2 = matrix[x - 1, y] + GapPernalty;
-        int val3 = matrix[x, y - 1] + GapPernalty;
+        if (match) val1 = matrix[y - 1, x - 1] + Math;
+        else val1 = matrix[y - 1, x - 1] + MisMath;
+        int val2 = matrix[y - 1, x] + GapPernalty;
+        int val3 = matrix[y, x - 1] + GapPernalty;
 
         if (val1 >= val2 && val1 >= val3) return val1; 
         if (val2 >= val1 && val2 >= val3) return val2; 
@@ -33,28 +35,30 @@ public class Compute : ICompute
     {
         string AligmentA = "";
         string AligmentB = "";
-        int i = xSize;
-        int j = ySize;
+        int i = ySize;
+        int j = xSize;
 
         while (i > 0 || j > 0)
         {     
-            if (i > 0 && j > 0 && matrix[i, j] == (matrix[i - 1, j - 1] + ((x[i - 1] == y[j - 1])?-GapPernalty:GapPernalty)))
+
+            if (i > 0 && j > 0 && matrix[i, j] == (matrix[i - 1, j - 1] + ((x[j - 1] == y[i - 1])?-GapPernalty:GapPernalty)))
             {
-                AligmentA += x[i - 1];
-                AligmentB += y[j - 1];
+                AligmentA = x[j - 1] + AligmentA;
+                AligmentB = y[i - 1] + AligmentB;
                 i--;
                 j--;
             }
             else if (i > 0 && matrix[i, j] == matrix[i - 1, j] + GapPernalty)
             {
-                AligmentA += x[i - 1];
-                AligmentB += '-';
-                i--;
+
+                AligmentA = '-' + AligmentA;
+                AligmentB = y[i - 1] + AligmentB;
+                i--; 
             }
             else
             {
-                AligmentA += '-';
-                AligmentB += y[j - 1];
+                AligmentA = x[j - 1] + AligmentA;
+                AligmentB = '-' + AligmentB;
                 j--;
             }
         }

@@ -11,8 +11,8 @@ public class CommandLine : ICommandLine
 
         foreach (var arg in args)
         {
-            if (arg == "-a") indexToWrite = 0; 
-            else if (arg == "-b") indexToWrite = 1;
+            if (arg == "-x") indexToWrite = 0; 
+            else if (arg == "-y") indexToWrite = 1;
             else 
             {
                 var sequence = ParseSequence(arg);
@@ -25,8 +25,8 @@ public class CommandLine : ICommandLine
 
     private void CheckArgs(string[] args)
     {
-        if (!args.Contains("-a")) PrintException("ArgumentParseError \n Fist Sequenze not porovided \n Provide Argument with -a and then the uppercase letters");
-        if (!args.Contains("-b")) PrintException("ArgumentParseError \n Second Sequenze not porovided \n Provide Argument with -b and then the uppercase letters");
+        if (!args.Contains("-x")) PrintException("ArgumentParseError \n Fist Sequenze not porovided \n Provide Argument with -a and then the uppercase letters");
+        if (!args.Contains("-y")) PrintException("ArgumentParseError \n Second Sequenze not porovided \n Provide Argument with -b and then the uppercase letters");
     }
 
     private List<char> ParseSequence(string sequence)

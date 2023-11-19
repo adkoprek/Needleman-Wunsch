@@ -12,11 +12,11 @@ class Program
         var parsedArgs = CommandLineService.ParseArgs(args);
         var matrix = ComputeService.CreateMatrix(parsedArgs[0].Count + 1, parsedArgs[1].Count + 1);
 
-        for (int i = 1; i < parsedArgs[0].Count + 1; i++)
+        for (int i = 1; i < parsedArgs[1].Count + 1; i++)
         {
-            for (int j = 1; j < parsedArgs[1].Count + 1; j++)
+            for (int j = 1; j < parsedArgs[0].Count + 1; j++)
             {
-                matrix[j, i] = ComputeService.ComputeBestValue(matrix, j, i, parsedArgs[1][i - 1] == parsedArgs[0][j - 1]);
+                matrix[i, j] = ComputeService.ComputeBestValue(matrix, j, i, parsedArgs[1][i - 1] == parsedArgs[0][j - 1]);
             }
         } 
 
