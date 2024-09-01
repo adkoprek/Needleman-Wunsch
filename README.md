@@ -2,19 +2,19 @@
 
 <p align="center">
   <a href="https://github.com/adkoprek/Needleman-Wunsch/graphs/contributors">
-	  <img src="https://img.shields.io/github/contributors/adkoprek/3D.svg?style=for-the-badge" alt="Contributors">
+	  <img src="https://img.shields.io/github/contributors/adkoprek/Needleman-Wunsch.svg?style=for-the-badge" alt="Contributors">
   </a>
   <a href="https://github.com/adkoprek/Needleman-Wunsch/network/members">
-	  <img src="https://img.shields.io/github/forks/adkoprek/3D.svg?style=for-the-badge" alt="Forks">
+	  <img src="https://img.shields.io/github/forks/adkoprek/Needleman-Wunsch.svg?style=for-the-badge" alt="Forks">
   </a>
   <a href="https://github.com/adkoprek/Needleman-Wunsch/stargazers">
-	  <img src="https://img.shields.io/github/stars/adkoprek/3D.svg?style=for-the-badge" alt="Stargazers">
+	  <img src="https://img.shields.io/github/stars/adkoprek/Needleman-Wunsch.svg?style=for-the-badge" alt="Stargazers">
   </a>
   <a href="https://github.com/adkoprek/Needleman-Wunsch/issues">
-	  <img src="https://img.shields.io/github/issues/adkoprek/3D.svg?style=for-the-badge" alt="Issues">
+	  <img src="https://img.shields.io/github/issues/adkoprek/Needleman-Wunsch.svg?style=for-the-badge" alt="Issues">
   </a>
   <a href="https://github.com/adkoprek/Needleman-Wunsch/blob/master/LICENSE.txt">
-	  <img src="https://img.shields.io/github/license/adkoprek/3D.svg?style=for-the-badge" alt="MIT License">
+	  <img src="https://img.shields.io/github/license/adkoprek/Needleman-Wunsch.svg?style=for-the-badge" alt="MIT License">
   </a>
 </p>
 <br />
