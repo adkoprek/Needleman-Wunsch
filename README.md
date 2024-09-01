@@ -93,9 +93,6 @@ Don't forget to give the project a star! Thanks again!
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-## Contact
-
-Adam Korpek - adam.koprek@edu.schulen-Turgi.ch
 
 [cs.js]: https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white
 [cs-url]: https://dotnet.microsoft.com/languages/csharp
